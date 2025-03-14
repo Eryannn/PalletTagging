@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3167883-9C04-49D5-B87A-6E98B410F994}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>barcode.My.MyApplication</StartupObject>
+    <RootNamespace>barcode</RootNamespace>
+    <AssemblyName>SFMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.10.27\Shopfloor_Folder\HYDRA PROJECT\UPDATES\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.10.27\Shopfloor_Folder\HYDRA PROJECT\UPDATES\</UpdateUrl>
+    <PublisherName>Erian Roen Domondon</PublisherName>
+    <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SFMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SFMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BC52353F5BEC4A07C4A0DCC4DA941B514B049B35</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SFMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net45\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net45\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFunctionsCls.vb" />
+    <Compile Include="CrystalReport_QRCODE.vb">
+      <DependentUpon>CrystalReport_QRCODE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport7.vb">
+      <DependentUpon>CrystalReport7.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport6.vb">
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport5.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptDecryptClass.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_UpdateUser.Designer.vb">
+      <DependentUpon>form_UpdateUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_UpdateUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRun.Designer.vb">
+      <DependentUpon>FRM_AddProductionRun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunDieCutting.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunDieCutting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunDieCutting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunDigiPress.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunDigiPress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunDigiPress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunGluing.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunGluing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunGluing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunGluingLamina.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunGluingLamina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunGluingLamina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunLamination.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunLamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunLamination.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunOffset.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunOffset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunQCMachine.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunQCMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunQCMachine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunStripping.Designer.vb">
+      <DependentUpon>FRM_AddProductionRunStripping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_AddProductionRunStripping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MKTPT_Summary.Designer.vb">
+      <DependentUpon>frm_MKTPT_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MKTPT_Summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MonitoringChecklistMain.designer.vb">
+      <DependentUpon>FRM_MonitoringChecklistMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MonitoringChecklistMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MonitoringChecklistSummary.Designer.vb">
+      <DependentUpon>FRM_MonitoringChecklistSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MonitoringChecklistSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Monitoring_Checklist_Report.Designer.vb">
+      <DependentUpon>FRM_Monitoring_Checklist_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Monitoring_Checklist_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_PreviewReport.Designer.vb">
+      <DependentUpon>FRM_PreviewReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_PreviewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_preview_OutputVolumeReport.Designer.vb">
+      <DependentUpon>frm_preview_OutputVolumeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_preview_OutputVolumeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PalletTagSummary.Designer.vb">
+      <DependentUpon>frm_PalletTagSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PalletTagSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_preview_TimeEvaluationReport.Designer.vb">
+      <DependentUpon>frm_preview_TimeEvaluationReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_preview_TimeEvaluationReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ProcessJob.designer.vb">
+      <DependentUpon>FRM_ProcessJob.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ProcessJob.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Transaction_Summary_Report.Designer.vb">
+      <DependentUpon>Frm_Transaction_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Transaction_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_UserMaintenance.Designer.vb">
+      <DependentUpon>FRM_UserMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_UserMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="ModuleDB.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RPT_Transaction_Summary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Transaction_Summary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistNxtProcess.Designer.vb">
+      <DependentUpon>UC_MonitoringChecklistNxtProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistNxtProcess.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistOperators.designer.vb">
+      <DependentUpon>UC_MonitoringChecklistOperators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistOperators.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistSuperIntendent.Designer.vb">
+      <DependentUpon>UC_MonitoringChecklistSuperIntendent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistSuperIntendent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistSupervisor.Designer.vb">
+      <DependentUpon>UC_MonitoringChecklistSupervisor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MonitoringChecklistSupervisor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessDieCutting.Designer.vb">
+      <DependentUpon>UC_NxtProcessDieCutting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessDieCutting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessDigiPress.Designer.vb">
+      <DependentUpon>UC_NxtProcessDigiPress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessDigiPress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessFinishing.Designer.vb">
+      <DependentUpon>UC_NxtProcessFinishing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessFinishing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessGluing.Designer.vb">
+      <DependentUpon>UC_NxtProcessGluing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessGluing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessGluingLamina.Designer.vb">
+      <DependentUpon>UC_NxtProcessGluingLamina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessGluingLamina.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessLamination.Designer.vb">
+      <DependentUpon>UC_NxtProcessLamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessLamination.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessOffset.Designer.vb">
+      <DependentUpon>UC_NxtProcessOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessOffset.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessQC.Designer.vb">
+      <DependentUpon>UC_NxtProcessQC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessQC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NxtProcessStripping.Designer.vb">
+      <DependentUpon>UC_NxtProcessStripping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NxtProcessStripping.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorDIeCutting.Designer.vb">
+      <DependentUpon>UC_OperatorDIeCutting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorDIeCutting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorDigiPress.Designer.vb">
+      <DependentUpon>UC_OperatorDigiPress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorDigiPress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorFinishing.Designer.vb">
+      <DependentUpon>UC_OperatorFinishing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorFinishing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorGluing.Designer.vb">
+      <DependentUpon>UC_OperatorGluing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorGluing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorGluingLamina.Designer.vb">
+      <DependentUpon>UC_OperatorGluingLamina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorGluingLamina.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorLamination.Designer.vb">
+      <DependentUpon>UC_OperatorLamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorLamination.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorOffset.Designer.vb">
+      <DependentUpon>UC_OperatorOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorOffset.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorQCMachine.Designer.vb">
+      <DependentUpon>UC_OperatorQCMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorQCMachine.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OperatorStripping.Designer.vb">
+      <DependentUpon>UC_OperatorStripping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OperatorStripping.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentDieCutting.Designer.vb">
+      <DependentUpon>UC_SuperIntendentDieCutting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentDieCutting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentDigiPress.Designer.vb">
+      <DependentUpon>UC_SuperIntendentDigiPress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentDigiPress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentFinishing.Designer.vb">
+      <DependentUpon>UC_SuperIntendentFinishing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentFinishing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentGluing.Designer.vb">
+      <DependentUpon>UC_SuperIntendentGluing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentGluing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentGluingLamina.Designer.vb">
+      <DependentUpon>UC_SuperIntendentGluingLamina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentGluingLamina.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentLamination.Designer.vb">
+      <DependentUpon>UC_SuperIntendentLamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentLamination.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentOffset.Designer.vb">
+      <DependentUpon>UC_SuperIntendentOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentOffset.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentQCMachine.Designer.vb">
+      <DependentUpon>UC_SuperIntendentQCMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentQCMachine.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SuperIntendentStripping.Designer.vb">
+      <DependentUpon>UC_SuperIntendentStripping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SuperIntendentStripping.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorDIeCutting.Designer.vb">
+      <DependentUpon>UC_SupervisorDIeCutting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorDIeCutting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorDigiPress.Designer.vb">
+      <DependentUpon>UC_SupervisorDigiPress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorDigiPress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorFinishing.Designer.vb">
+      <DependentUpon>UC_SupervisorFinishing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorFinishing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorGluing.Designer.vb">
+      <DependentUpon>UC_SupervisorGluing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorGluing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorGluingLamina.Designer.vb">
+      <DependentUpon>UC_SupervisorGluingLamina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorGluingLamina.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorLamination.Designer.vb">
+      <DependentUpon>UC_SupervisorLamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorLamination.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorOffset.Designer.vb">
+      <DependentUpon>UC_SupervisorOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorOffset.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorQCMachine.Designer.vb">
+      <DependentUpon>UC_SupervisorQCMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorQCMachine.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SupervisorStripping.Designer.vb">
+      <DependentUpon>UC_SupervisorStripping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SupervisorStripping.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_PI_SP_AppDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_PI_SP_AppDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport_QRCODE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_QRCODE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport7.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_UpdateUser.resx">
+      <DependentUpon>form_UpdateUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRun.resx">
+      <DependentUpon>FRM_AddProductionRun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunDieCutting.resx">
+      <DependentUpon>FRM_AddProductionRunDieCutting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunDigiPress.resx">
+      <DependentUpon>FRM_AddProductionRunDigiPress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunGluing.resx">
+      <DependentUpon>FRM_AddProductionRunGluing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunGluingLamina.resx">
+      <DependentUpon>FRM_AddProductionRunGluingLamina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunLamination.resx">
+      <DependentUpon>FRM_AddProductionRunLamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunOffset.resx">
+      <DependentUpon>FRM_AddProductionRunOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunQCMachine.resx">
+      <DependentUpon>FRM_AddProductionRunQCMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddProductionRunStripping.resx">
+      <DependentUpon>FRM_AddProductionRunStripping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MKTPT_Summary.resx">
+      <DependentUpon>frm_MKTPT_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MonitoringChecklistMain.resx">
+      <DependentUpon>FRM_MonitoringChecklistMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MonitoringChecklistSummary.resx">
+      <DependentUpon>FRM_MonitoringChecklistSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Monitoring_Checklist_Report.resx">
+      <DependentUpon>FRM_Monitoring_Checklist_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_PreviewReport.resx">
+      <DependentUpon>FRM_PreviewReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_preview_OutputVolumeReport.resx">
+      <DependentUpon>frm_preview_OutputVolumeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PalletTagSummary.resx">
+      <DependentUpon>frm_PalletTagSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_preview_TimeEvaluationReport.resx">
+      <DependentUpon>frm_preview_TimeEvaluationReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ProcessJob.resx">
+      <DependentUpon>FRM_ProcessJob.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Transaction_Summary_Report.resx">
+      <DependentUpon>Frm_Transaction_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_UserMaintenance.resx">
+      <DependentUpon>FRM_UserMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_Transaction_Summary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_Transaction_Summary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MonitoringChecklistNxtProcess.resx">
+      <DependentUpon>UC_MonitoringChecklistNxtProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MonitoringChecklistOperators.resx">
+      <DependentUpon>UC_MonitoringChecklistOperators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MonitoringChecklistSuperIntendent.resx">
+      <DependentUpon>UC_MonitoringChecklistSuperIntendent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MonitoringChecklistSupervisor.resx">
+      <DependentUpon>UC_MonitoringChecklistSupervisor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessDieCutting.resx">
+      <DependentUpon>UC_NxtProcessDieCutting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessDigiPress.resx">
+      <DependentUpon>UC_NxtProcessDigiPress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessFinishing.resx">
+      <DependentUpon>UC_NxtProcessFinishing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessGluing.resx">
+      <DependentUpon>UC_NxtProcessGluing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessGluingLamina.resx">
+      <DependentUpon>UC_NxtProcessGluingLamina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessLamination.resx">
+      <DependentUpon>UC_NxtProcessLamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessOffset.resx">
+      <DependentUpon>UC_NxtProcessOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessQC.resx">
+      <DependentUpon>UC_NxtProcessQC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NxtProcessStripping.resx">
+      <DependentUpon>UC_NxtProcessStripping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorDIeCutting.resx">
+      <DependentUpon>UC_OperatorDIeCutting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorDigiPress.resx">
+      <DependentUpon>UC_OperatorDigiPress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorFinishing.resx">
+      <DependentUpon>UC_OperatorFinishing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorGluing.resx">
+      <DependentUpon>UC_OperatorGluing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorGluingLamina.resx">
+      <DependentUpon>UC_OperatorGluingLamina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorLamination.resx">
+      <DependentUpon>UC_OperatorLamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorOffset.resx">
+      <DependentUpon>UC_OperatorOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorQCMachine.resx">
+      <DependentUpon>UC_OperatorQCMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OperatorStripping.resx">
+      <DependentUpon>UC_OperatorStripping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentDieCutting.resx">
+      <DependentUpon>UC_SuperIntendentDieCutting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentDigiPress.resx">
+      <DependentUpon>UC_SuperIntendentDigiPress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentFinishing.resx">
+      <DependentUpon>UC_SuperIntendentFinishing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentGluing.resx">
+      <DependentUpon>UC_SuperIntendentGluing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentGluingLamina.resx">
+      <DependentUpon>UC_SuperIntendentGluingLamina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentLamination.resx">
+      <DependentUpon>UC_SuperIntendentLamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentOffset.resx">
+      <DependentUpon>UC_SuperIntendentOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentQCMachine.resx">
+      <DependentUpon>UC_SuperIntendentQCMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SuperIntendentStripping.resx">
+      <DependentUpon>UC_SuperIntendentStripping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorDIeCutting.resx">
+      <DependentUpon>UC_SupervisorDIeCutting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorDigiPress.resx">
+      <DependentUpon>UC_SupervisorDigiPress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorFinishing.resx">
+      <DependentUpon>UC_SupervisorFinishing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorGluing.resx">
+      <DependentUpon>UC_SupervisorGluing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorGluingLamina.resx">
+      <DependentUpon>UC_SupervisorGluingLamina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorLamination.resx">
+      <DependentUpon>UC_SupervisorLamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorOffset.resx">
+      <DependentUpon>UC_SupervisorOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorQCMachine.resx">
+      <DependentUpon>UC_SupervisorQCMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SupervisorStripping.resx">
+      <DependentUpon>UC_SupervisorStripping.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RDL\IT_RPT_OutputVolumeReport.rdl" />
+    <None Include="RDL\IT_RPT_TimeEvaluationReport.rdl" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SFMS_TemporaryKey.pfx" />
+    <None Include="_PI_SP_AppDataSet.xsc">
+      <DependentUpon>_PI_SP_AppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_PI_SP_AppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_PI_SP_AppDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_PI_SP_AppDataSet.xss">
+      <DependentUpon>_PI_SP_AppDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FPC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SF-MS.ico" />
+    <Content Include="tag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
