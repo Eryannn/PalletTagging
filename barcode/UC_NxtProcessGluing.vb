@@ -8,7 +8,10 @@
             With cmd.Parameters
                 .AddWithValue("@Site", Form1.cmb_site.Text)
                 .AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
+
             End With
+
+            MsgBox("Gluing")
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 If dr.Read() Then
@@ -16,7 +19,9 @@
                     TXT_CurGoodQty.Text = Convert.ToDecimal(dr("mchout_GoodCurrPalltQty")).ToString("N0")
                     TXT_CurRedPalletQty.Text = Convert.ToDecimal(dr("mchout_RedCurrPalltQty")).ToString("N0")
                     TXT_CurSpoilageQty.Text = Convert.ToDecimal(dr("mchout_SpoilCurrPalltQty")).ToString("N0")
-
+                    'MsgBox(dr("mchout_GoodCurrPalltQty").ToString())
+                    'MsgBox(dr("mchout_RedCurrPalltQty").ToString())
+                    'MsgBox(dr("mchout_SpoilCurrPalltQty").ToString())
 
                     TXT_Remarks.Text = dr("output_Remrks").ToString()
                     TXT_Acknowledge.Text = dr("NxtNameSup").ToString()

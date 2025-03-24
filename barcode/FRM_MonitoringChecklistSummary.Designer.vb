@@ -125,9 +125,10 @@ Partial Class FRM_MonitoringChecklistSummary
         '
         Me.TXT_CheckMcNo.BackColor = System.Drawing.SystemColors.Highlight
         Me.TXT_CheckMcNo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TXT_CheckMcNo.Location = New System.Drawing.Point(1768, 15)
+        Me.TXT_CheckMcNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_CheckMcNo.Location = New System.Drawing.Point(1041, 32)
         Me.TXT_CheckMcNo.Name = "TXT_CheckMcNo"
-        Me.TXT_CheckMcNo.Size = New System.Drawing.Size(100, 13)
+        Me.TXT_CheckMcNo.Size = New System.Drawing.Size(267, 22)
         Me.TXT_CheckMcNo.TabIndex = 165
         Me.TXT_CheckMcNo.Visible = False
         '

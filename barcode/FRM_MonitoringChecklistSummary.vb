@@ -233,8 +233,7 @@ Public Class FRM_MonitoringChecklistSummary
         FRM_MonitoringChecklistMain.LBL_SectionName.Text = CBO_SectionSummary.Text
 
 
-        Me.Hide()
-        FRM_MonitoringChecklistMain.Show()
+
 
 
 
@@ -265,14 +264,13 @@ Public Class FRM_MonitoringChecklistSummary
                     FRM_MonitoringChecklistMain.txt_date.Text = Convert.ToDateTime(dr("mcdate")).ToString("d")
                     FRM_MonitoringChecklistMain.txt_jobqty.Text = Convert.ToDecimal(dr("job_qty")).ToString("N0")
                     FRM_MonitoringChecklistMain.txt_um.Text = dr("U_m").ToString()
-                    FRM_MonitoringChecklistMain.TXT_MCNO.Text = dr("mcnum").ToString()
+                    'FRM_MonitoringChecklistMain.TXT_MCNO.Text = dr("mcnum").ToString()
                     FRM_MonitoringChecklistMain.LBL_oper_numOperator.Text = dr("emp_num").ToString()
                     FRM_MonitoringChecklistMain.txt_shift.Text = dr("shift").ToString()
                     FRM_MonitoringChecklistMain.TXT_CreatedBy.Text = CreatedBySupervisor
                     joborder = dr("job").ToString()
                     suffix = dr("suffix").ToString()
                     oper_num = dr("oper_num").ToString()
-
                     dr.Close()
                     con.Close()
 
@@ -300,6 +298,8 @@ Public Class FRM_MonitoringChecklistSummary
         End Try
 
 
+        Me.Hide()
+        FRM_MonitoringChecklistMain.Show()
         'SECTION and section name change
 
 
@@ -793,13 +793,8 @@ Public Class FRM_MonitoringChecklistSummary
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
 
-    Private Sub TXT_OperName_TextChanged(sender As Object, e As EventArgs) Handles TXT_OperName.TextChanged
-
-    End Sub
 
 
 End Class

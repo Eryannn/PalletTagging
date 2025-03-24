@@ -1150,7 +1150,7 @@ Public Class UC_SupervisorFinishing
 
 
                     DTP_JobLineLeaderStart.Text = dr("jic_FILineLdrStart").ToString()
-                    DTP_JobLineLeaderEnd.Text = dr("jic_FISorter4Start").ToString()
+                    DTP_JobLineLeaderEnd.Text = dr("jic_FILineLdrEnd").ToString()
 
                     DTP_JobFeederStart.Text = dr("jic_FIFeederStart").ToString()
                     DTP_JobFeederEnd.Text = dr("jic_FIFeederEnd").ToString()
@@ -2648,8 +2648,10 @@ Public Class UC_SupervisorFinishing
                 cmd.Parameters.AddWithValue("@jic_Feedrman2Time", "")
 
 
-                cmd.Parameters.AddWithValue("@jic_FILineLdrStart", DTP_JobLineLeaderStart.Text)
-                cmd.Parameters.AddWithValue("@jic_FILineLdrEnd", DTP_JobLineLeaderEnd.Text)
+                'cmd.Parameters.AddWithValue("@jic_FILineLdrStart", DTP_JobLineLeaderStart.Text)
+                'cmd.Parameters.AddWithValue("@jic_FILineLdrEnd", DTP_JobLineLeaderEnd.Text)
+                cmd.Parameters.AddWithValue("@jic_FILineLdrStart", DTP_JobLineLeaderStart.Value)
+                cmd.Parameters.AddWithValue("@jic_FILineLdrEnd", DTP_JobLineLeaderEnd.Value)
                 cmd.Parameters.AddWithValue("@jic_FIFeederStart", DTP_JobFeederStart.Text)
                 cmd.Parameters.AddWithValue("@jic_FIFeederEnd", DTP_JobFeederEnd.Text)
 
@@ -2689,6 +2691,7 @@ Public Class UC_SupervisorFinishing
                 cmd.Parameters.AddWithValue("@jic_FIStickrqty", TXT_JobStickerQuantity.Text)
                 cmd.Parameters.AddWithValue("@jic_FICutoutlbl", TXT_JobCutOutLabelQty.Text)
                 cmd.Parameters.AddWithValue("@jic_FIQtyperpk", TXT_JobQtyPerPack.Text)
+
 
                 cmd.ExecuteNonQuery()
                 con.Close()

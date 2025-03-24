@@ -9,6 +9,7 @@
                 .AddWithValue("@Site", Form1.cmb_site.Text)
                 .AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
             End With
+
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 If dr.Read() Then
@@ -49,12 +50,14 @@
     Private Sub BTN_Acknowledge_Click(sender As Object, e As EventArgs) Handles BTN_Acknowledge.Click
         Try
             OpenConnection()
-            cmd.CommandText = "UPDATE sppmcOutput SET mchout_AckNxtProcSV = @mchout_AckNxtProcSV WHERE Site = @site And mcnum = @mcnum"
+            'cmd.CommandText = "UPDATE sppmcOutput SET mchout_AckNxtProcSV = @mchout_AckNxtProcSV WHERE Site = @site And mcnum = @mcnum"
+            cmd.CommandText = "UPDATE sppmcOutput SET mchout_AckQAInsp = @mchout_AckQAInsp WHERE Site = @site And mcnum = @mcnum"
             cmd.CommandType = CommandType.Text
             cmd.Parameters.Clear()
             cmd.Parameters.AddWithValue("@site", Form1.cmb_site.Text)
             cmd.Parameters.AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
-            cmd.Parameters.AddWithValue("@mchout_AckNxtProcSV", FRM_MonitoringChecklistMain.lbl_empnum.Text)
+            cmd.Parameters.AddWithValue("@mchout_AckQAInsp", FRM_MonitoringChecklistMain.lbl_empnum.Text)
+            'cmd.Parameters.AddWithValue("")
             cmd.ExecuteNonQuery()
             con.Close()
             MsgBox("successfully acknowledge!")

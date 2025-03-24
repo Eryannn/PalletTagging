@@ -457,7 +457,7 @@ Public Class UC_OperatorGluingLamina
                 If dr.Read() Then
 
 
-                    TXT_Acknowledge.Text = dr("NxtNameSup").ToString()
+                    TXT_Acknowledge.Text = dr("mchout_AckQAInsp").ToString()
 
 
 
