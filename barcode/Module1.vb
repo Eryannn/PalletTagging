@@ -5,7 +5,7 @@ Imports System.Data
 Imports System.Configuration
 Imports System.Security.Cryptography
 Module globalvariable
-    Public app_version As String = "4.3" 'Changed from 4.2 to 4.3
+    Public app_version As String = "4.4" 'Changed from 4.3 to 4.4
 
     Public maintenance_version As String
 

@@ -23,34 +23,34 @@ Partial Class UC_OperatorDigiPress
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle85 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle86 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle87 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle88 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle89 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle90 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TXT_CurRedPalletQty = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -121,11 +121,12 @@ Partial Class UC_OperatorDigiPress
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cscas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TXT_CurCleanShtsQty = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TXT_CleanShtsQty = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel14.SuspendLayout()
@@ -218,7 +219,7 @@ Partial Class UC_OperatorDigiPress
         'TXT_SpoilQty
         '
         Me.TXT_SpoilQty.BackColor = System.Drawing.SystemColors.Menu
-        Me.TXT_SpoilQty.Location = New System.Drawing.Point(1737, 796)
+        Me.TXT_SpoilQty.Location = New System.Drawing.Point(1615, 797)
         Me.TXT_SpoilQty.Name = "TXT_SpoilQty"
         Me.TXT_SpoilQty.Size = New System.Drawing.Size(100, 20)
         Me.TXT_SpoilQty.TabIndex = 241
@@ -325,11 +326,11 @@ Partial Class UC_OperatorDigiPress
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TXT_Acknowledge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TXT_Acknowledge.Enabled = False
-        Me.TXT_Acknowledge.Location = New System.Drawing.Point(1470, 655)
+        Me.TXT_Acknowledge.Location = New System.Drawing.Point(1469, 655)
         Me.TXT_Acknowledge.Margin = New System.Windows.Forms.Padding(2)
         Me.TXT_Acknowledge.Multiline = True
         Me.TXT_Acknowledge.Name = "TXT_Acknowledge"
-        Me.TXT_Acknowledge.Size = New System.Drawing.Size(154, 25)
+        Me.TXT_Acknowledge.Size = New System.Drawing.Size(154, 24)
         Me.TXT_Acknowledge.TabIndex = 219
         '
         'BTN_AddProductionRun
@@ -389,7 +390,7 @@ Partial Class UC_OperatorDigiPress
         'TXT_RedQty
         '
         Me.TXT_RedQty.BackColor = System.Drawing.SystemColors.Menu
-        Me.TXT_RedQty.Location = New System.Drawing.Point(1631, 796)
+        Me.TXT_RedQty.Location = New System.Drawing.Point(1509, 797)
         Me.TXT_RedQty.Name = "TXT_RedQty"
         Me.TXT_RedQty.Size = New System.Drawing.Size(100, 20)
         Me.TXT_RedQty.TabIndex = 240
@@ -403,7 +404,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel13.Controls.Add(Me.Label23)
         Me.Panel13.Controls.Add(Me.Label22)
-        Me.Panel13.Location = New System.Drawing.Point(1470, 611)
+        Me.Panel13.Location = New System.Drawing.Point(1469, 611)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(154, 45)
         Me.Panel13.TabIndex = 221
@@ -434,7 +435,7 @@ Partial Class UC_OperatorDigiPress
         'TXT_CurQty
         '
         Me.TXT_CurQty.BackColor = System.Drawing.SystemColors.Menu
-        Me.TXT_CurQty.Location = New System.Drawing.Point(1525, 796)
+        Me.TXT_CurQty.Location = New System.Drawing.Point(1403, 797)
         Me.TXT_CurQty.Name = "TXT_CurQty"
         Me.TXT_CurQty.Size = New System.Drawing.Size(100, 20)
         Me.TXT_CurQty.TabIndex = 239
@@ -585,8 +586,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_Time1
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_Time1.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_Time1.DefaultCellStyle = DataGridViewCellStyle85
         Me.DGV_Time1.FillWeight = 150.0!
         Me.DGV_Time1.HeaderText = "TIME"
         Me.DGV_Time1.Name = "DGV_Time1"
@@ -594,8 +595,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_CuttingBladeSharp1
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_CuttingBladeSharp1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_CuttingBladeSharp1.DefaultCellStyle = DataGridViewCellStyle86
         Me.DGV_CuttingBladeSharp1.FillWeight = 10.0!
         Me.DGV_CuttingBladeSharp1.HeaderText = "Ink Load C"
         Me.DGV_CuttingBladeSharp1.Name = "DGV_CuttingBladeSharp1"
@@ -605,8 +606,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_CuttingBladeCon
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_CuttingBladeCon.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_CuttingBladeCon.DefaultCellStyle = DataGridViewCellStyle87
         Me.DGV_CuttingBladeCon.HeaderText = "Ink Load M"
         Me.DGV_CuttingBladeCon.Name = "DGV_CuttingBladeCon"
         Me.DGV_CuttingBladeCon.ReadOnly = True
@@ -615,8 +616,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_LooseFi1
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_LooseFi1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_LooseFi1.DefaultCellStyle = DataGridViewCellStyle88
         Me.DGV_LooseFi1.HeaderText = "Ink Load Y"
         Me.DGV_LooseFi1.Name = "DGV_LooseFi1"
         Me.DGV_LooseFi1.ReadOnly = True
@@ -626,8 +627,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_LooseFiqty1
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_LooseFiqty1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_LooseFiqty1.DefaultCellStyle = DataGridViewCellStyle89
         Me.DGV_LooseFiqty1.HeaderText = "Ink Load K"
         Me.DGV_LooseFiqty1.Name = "DGV_LooseFiqty1"
         Me.DGV_LooseFiqty1.ReadOnly = True
@@ -635,8 +636,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_OffSquare1
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_OffSquare1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_OffSquare1.DefaultCellStyle = DataGridViewCellStyle90
         Me.DGV_OffSquare1.HeaderText = "Ink Load O"
         Me.DGV_OffSquare1.Name = "DGV_OffSquare1"
         Me.DGV_OffSquare1.ReadOnly = True
@@ -646,8 +647,8 @@ Partial Class UC_OperatorDigiPress
         '
         'DGV_OffSquareQTY1
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_OffSquareQTY1.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_OffSquareQTY1.DefaultCellStyle = DataGridViewCellStyle91
         Me.DGV_OffSquareQTY1.HeaderText = "Ink Load G"
         Me.DGV_OffSquareQTY1.Name = "DGV_OffSquareQTY1"
         Me.DGV_OffSquareQTY1.ReadOnly = True
@@ -655,15 +656,15 @@ Partial Class UC_OperatorDigiPress
         '
         'Column1
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle92
         Me.Column1.HeaderText = "Ink Load V"
         Me.Column1.Name = "Column1"
         '
         'DBV_IncorrectDi1
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DBV_IncorrectDi1.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DBV_IncorrectDi1.DefaultCellStyle = DataGridViewCellStyle93
         Me.DBV_IncorrectDi1.HeaderText = "Main Pile"
         Me.DBV_IncorrectDi1.Name = "DBV_IncorrectDi1"
         Me.DBV_IncorrectDi1.ReadOnly = True
@@ -672,15 +673,15 @@ Partial Class UC_OperatorDigiPress
         '
         'QTY
         '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.QTY.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.QTY.DefaultCellStyle = DataGridViewCellStyle94
         Me.QTY.HeaderText = "Drawer 1"
         Me.QTY.Name = "QTY"
         '
         'DBV_IncorrectDiQTY1
         '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DBV_IncorrectDiQTY1.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DBV_IncorrectDiQTY1.DefaultCellStyle = DataGridViewCellStyle95
         Me.DBV_IncorrectDiQTY1.HeaderText = "Drawer 2"
         Me.DBV_IncorrectDiQTY1.Name = "DBV_IncorrectDiQTY1"
         Me.DBV_IncorrectDiQTY1.ReadOnly = True
@@ -688,15 +689,15 @@ Partial Class UC_OperatorDigiPress
         '
         'Column2
         '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle96
         Me.Column2.HeaderText = "Off Color / scum"
         Me.Column2.Name = "Column2"
         '
         'DGV_TearOff1
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_TearOff1.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_TearOff1.DefaultCellStyle = DataGridViewCellStyle97
         Me.DGV_TearOff1.HeaderText = "QTY"
         Me.DGV_TearOff1.Name = "DGV_TearOff1"
         Me.DGV_TearOff1.ReadOnly = True
@@ -705,120 +706,119 @@ Partial Class UC_OperatorDigiPress
         '
         'Column3
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle98
         Me.Column3.HeaderText = "Plugging"
         Me.Column3.Name = "Column3"
         '
         'DGV_TearOffQTY1
         '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_TearOffQTY1.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_TearOffQTY1.DefaultCellStyle = DataGridViewCellStyle99
         Me.DGV_TearOffQTY1.HeaderText = "QTY"
         Me.DGV_TearOffQTY1.Name = "DGV_TearOffQTY1"
         Me.DGV_TearOffQTY1.ReadOnly = True
         '
         'cs
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.cs.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.cs.DefaultCellStyle = DataGridViewCellStyle100
         Me.cs.HeaderText = "Hawa / Doubling"
         Me.cs.Name = "cs"
         '
         'css
         '
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.css.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.css.DefaultCellStyle = DataGridViewCellStyle101
         Me.css.HeaderText = "QTY"
         Me.css.Name = "css"
         '
         'Column4
         '
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle102
         Me.Column4.HeaderText = "Sluring"
         Me.Column4.Name = "Column4"
         '
         'Column5
         '
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle103
         Me.Column5.HeaderText = "QTY"
         Me.Column5.Name = "Column5"
         '
         'Column6
         '
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle104
         Me.Column6.HeaderText = "Ghosting"
         Me.Column6.Name = "Column6"
         '
         'Column7
         '
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column7.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column7.DefaultCellStyle = DataGridViewCellStyle105
         Me.Column7.HeaderText = "QTY"
         Me.Column7.Name = "Column7"
         '
         'Column8
         '
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column8.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column8.DefaultCellStyle = DataGridViewCellStyle106
         Me.Column8.HeaderText = "Misregistration"
         Me.Column8.Name = "Column8"
         '
         'Column9
         '
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column9.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle107
         Me.Column9.HeaderText = "QTY"
         Me.Column9.Name = "Column9"
         '
         'Column10
         '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column10.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column10.DefaultCellStyle = DataGridViewCellStyle108
         Me.Column10.HeaderText = "Dent"
         Me.Column10.Name = "Column10"
         '
         'Column11
         '
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column11.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column11.DefaultCellStyle = DataGridViewCellStyle109
         Me.Column11.HeaderText = "QTY"
         Me.Column11.Name = "Column11"
         '
         'Column12
         '
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column12.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column12.DefaultCellStyle = DataGridViewCellStyle110
         Me.Column12.HeaderText = "Spot"
         Me.Column12.Name = "Column12"
         '
         'Column13
         '
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column13.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column13.DefaultCellStyle = DataGridViewCellStyle111
         Me.Column13.HeaderText = "QTY"
         Me.Column13.Name = "Column13"
         '
         'cscas
         '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.cscas.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.cscas.DefaultCellStyle = DataGridViewCellStyle112
         Me.cscas.HeaderText = "TOTAL"
         Me.cscas.Name = "cscas"
         '
-        'TextBox1
+        'TXT_CurCleanShtsQty
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1219, 655)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(251, 24)
-        Me.TextBox1.TabIndex = 246
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_CurCleanShtsQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TXT_CurCleanShtsQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_CurCleanShtsQty.Location = New System.Drawing.Point(1219, 655)
+        Me.TXT_CurCleanShtsQty.Name = "TXT_CurCleanShtsQty"
+        Me.TXT_CurCleanShtsQty.Size = New System.Drawing.Size(251, 24)
+        Me.TXT_CurCleanShtsQty.TabIndex = 246
+        Me.TXT_CurCleanShtsQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel1
         '
@@ -859,11 +859,21 @@ Partial Class UC_OperatorDigiPress
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "CLEANING SHEETS"
         '
+        'TXT_CleanShtsQty
+        '
+        Me.TXT_CleanShtsQty.BackColor = System.Drawing.SystemColors.Menu
+        Me.TXT_CleanShtsQty.Location = New System.Drawing.Point(1721, 797)
+        Me.TXT_CleanShtsQty.Name = "TXT_CleanShtsQty"
+        Me.TXT_CleanShtsQty.Size = New System.Drawing.Size(100, 20)
+        Me.TXT_CleanShtsQty.TabIndex = 247
+        Me.TXT_CleanShtsQty.Visible = False
+        '
         'UC_OperatorDigiPress
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TXT_CleanShtsQty)
+        Me.Controls.Add(Me.TXT_CurCleanShtsQty)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.TXT_CurRedPalletQty)
@@ -994,9 +1004,10 @@ Partial Class UC_OperatorDigiPress
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents cscas As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TXT_CurCleanShtsQty As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label9 As Label
+    Friend WithEvents TXT_CleanShtsQty As TextBox
 End Class

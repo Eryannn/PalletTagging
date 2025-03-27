@@ -14,7 +14,7 @@ Public Class UC_OperatorDigiPress
                 .AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
             End With
 
-
+            'test
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 If dr.Read Then
@@ -22,6 +22,7 @@ Public Class UC_OperatorDigiPress
                     TXT_CurGoodQty.Text = Convert.ToDecimal(dr("completeqty")).ToString("N0")
                     TXT_CurRedPalletQty.Text = Convert.ToDecimal(dr("redtagsqty")).ToString("N0")
                     TXT_CurSpoilageQty.Text = Convert.ToDecimal(dr("scrappedqty")).ToString("N0")
+                    TXT_CurCleanShtsQty.Text = Convert.ToDecimal(dr("cleansheetsqty")).ToString("N0")
 
 
                     'TXT_GoodQtyTotal.Text = dr("completeqty").ToString()
@@ -149,6 +150,7 @@ Public Class UC_OperatorDigiPress
             Dim currGoodQty As Integer
             Dim currRedQty As Integer
             Dim currSpoilQty As Integer
+            Dim currCleanShtsQty As Integer
 
 
 
@@ -176,6 +178,8 @@ Public Class UC_OperatorDigiPress
                     currGoodQty = dr("completeqty").ToString()
                     currRedQty = dr("redtagsqty").ToString()
                     currSpoilQty = dr("scrappedqty").ToString()
+                    currCleanShtsQty = dr("cleansheetsqty").ToString()
+
 
 
                     'TXT_GoodQtyTotal.Text = dr("completeqty").ToString()
@@ -223,7 +227,12 @@ Public Class UC_OperatorDigiPress
 
 
                 OpenConnection()
-                cmd.CommandText = "UPDATE sppmcOutput SET mchout_GoodCurrPalltQty  = @mchout_GoodCurrPalltQty, mchout_RedCurrPalltQty = @mchout_RedCurrPalltQty, mchout_SpoilCurrPalltQty = @mchout_SpoilCurrPalltQty WHERE  Site = @site And mcnum = @mcnum"
+                cmd.CommandText = "UPDATE sppmcOutput 
+                                    SET mchout_GoodCurrPalltQty  = @mchout_GoodCurrPalltQty, 
+                                    mchout_RedCurrPalltQty = @mchout_RedCurrPalltQty, 
+                                    mchout_SpoilCurrPalltQty = @mchout_SpoilCurrPalltQty,
+                                    mchout_CleanShtCurrPallQty = @mchout_CleanShtCurrPallQty 
+                                    WHERE  Site = @site And mcnum = @mcnum"
                 cmd.Parameters.Clear()
                 With cmd.Parameters
                     .AddWithValue("@site", Form1.cmb_site.Text)
@@ -231,6 +240,7 @@ Public Class UC_OperatorDigiPress
                     .AddWithValue("@mchout_GoodCurrPalltQty", currGoodQty)
                     .AddWithValue("@mchout_RedCurrPalltQty", currRedQty)
                     .AddWithValue("@mchout_SpoilCurrPalltQty", currSpoilQty)
+                    .AddWithValue("@mchout_CleanShtCurrPallQty", TXT_CurCleanShtsQty.Text)
 
                 End With
                 cmd.ExecuteNonQuery()
@@ -242,11 +252,10 @@ Public Class UC_OperatorDigiPress
             Else
                 con.Close()
 
-
-
-
                 OpenConnection()
-                cmd.CommandText = "INSERT INTO sppmcOutput (Site, mcnum , mchout_GoodCurrPalltQty, mchout_RedCurrPalltQty, mchout_SpoilCurrPalltQty) VALUES (@site, @mcnum,  @mchout_GoodCurrPalltQty, @mchout_RedCurrPalltQty, @mchout_SpoilCurrPalltQty) "
+                cmd.CommandText = "INSERT INTO 
+                                    sppmcOutput (Site, mcnum , mchout_GoodCurrPalltQty, mchout_RedCurrPalltQty, mchout_SpoilCurrPalltQty, mchout_CleanShtCurrPallQty) 
+                                    VALUES (@site, @mcnum,  @mchout_GoodCurrPalltQty, @mchout_RedCurrPalltQty, @mchout_SpoilCurrPalltQty, @mchout_CleanShtCurrPallQty) "
                 cmd.Parameters.Clear()
                 With cmd.Parameters
                     .AddWithValue("@site", Form1.cmb_site.Text)
@@ -254,6 +263,7 @@ Public Class UC_OperatorDigiPress
                     .AddWithValue("@mchout_GoodCurrPalltQty", TXT_CurQty.Text)
                     .AddWithValue("@mchout_RedCurrPalltQty", TXT_RedQty.Text)
                     .AddWithValue("@mchout_SpoilCurrPalltQty", TXT_SpoilQty.Text)
+                    .AddWithValue("@mchout_CleanShtCurrPallQty", TXT_CurCleanShtsQty.Text)
 
                 End With
                 cmd.ExecuteNonQuery()
@@ -689,10 +699,6 @@ Public Class UC_OperatorDigiPress
 
     Private Sub calculate_output_sfms_jobtran()
 
-
-
-
-
         Dim cmd_calculate_sppmcoutput As New SqlCommand("Select * from sppmcOutput where  Site = @Site And mcnum = @mcnum", con)
         cmd_calculate_sppmcoutput.Parameters.AddWithValue("@Site", Form1.cmb_site.Text)
         cmd_calculate_sppmcoutput.Parameters.AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
@@ -735,11 +741,17 @@ Public Class UC_OperatorDigiPress
                     End If
 
 
-
                     If read_cmd_sppmcoutput("mchout_SpoilCurrPalltQty").ToString() = "" Then
                         TXT_CurSpoilageQty.Text = 0
                     Else
                         TXT_CurSpoilageQty.Text = Convert.ToDecimal(read_cmd_sppmcoutput("mchout_SpoilCurrPalltQty")).ToString("N0")
+                    End If
+
+
+                    If read_cmd_sppmcoutput("mchout_CleanShtCurrPallQty").ToString() = "" Then
+                        TXT_CurCleanShtsQty.Text = 0
+                    Else
+                        TXT_CurCleanShtsQty.Text = Convert.ToDecimal(read_cmd_sppmcoutput("mchout_CleanShtCurrPallQty")).ToString("N0")
                     End If
 
 
@@ -771,10 +783,12 @@ Public Class UC_OperatorDigiPress
                         TXT_CurGoodQty.Text = Convert.ToDecimal(read_cmd_calculate("completeqty")).ToString("N0")
                         TXT_CurRedPalletQty.Text = Convert.ToDecimal(read_cmd_calculate("redtagsqty")).ToString("N0")
                         TXT_CurSpoilageQty.Text = Convert.ToDecimal(read_cmd_calculate("scrappedqty")).ToString("N0")
+                        TXT_CurCleanShtsQty.Text = Convert.ToDecimal(read_cmd_calculate("cleansheetsqty")).ToString("N0")
 
                         TXT_CurQty.Text = read_cmd_calculate("completeqty").ToString
                         TXT_RedQty.Text = read_cmd_calculate("redtagsqty").ToString
                         TXT_SpoilQty.Text = read_cmd_calculate("scrappedqty").ToString
+                        TXT_CleanShtsQty.Text = read_cmd_calculate("cleansheetsqty").ToString
 
                     End While
                     read_cmd_calculate.Close()
@@ -812,7 +826,7 @@ Public Class UC_OperatorDigiPress
                     TXT_CurGoodQty.Text = Convert.ToDecimal(dr("completeqty")).ToString("N0")
                     TXT_CurRedPalletQty.Text = Convert.ToDecimal(dr("redtagsqty")).ToString("N0")
                     TXT_CurSpoilageQty.Text = Convert.ToDecimal(dr("scrappedqty")).ToString("N0")
-
+                    TXT_CurCleanShtsQty.Text = Convert.ToDecimal(dr("cleansheetsqty")).ToString("N0")
 
                     'TXT_GoodQtyTotal.Text = dr("completeqty").ToString()
                     'TXT_RedPalletQtyTotal.Text = dr("redtagsqty").ToString()
