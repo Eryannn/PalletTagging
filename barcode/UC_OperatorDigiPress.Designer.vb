@@ -121,7 +121,11 @@ Partial Class UC_OperatorDigiPress
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cscas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel14.SuspendLayout()
@@ -131,6 +135,8 @@ Partial Class UC_OperatorDigiPress
         Me.Panel3.SuspendLayout()
         Me.Panel16.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TXT_CurRedPalletQty
@@ -138,7 +144,7 @@ Partial Class UC_OperatorDigiPress
         Me.TXT_CurRedPalletQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TXT_CurRedPalletQty.Enabled = False
         Me.TXT_CurRedPalletQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_CurRedPalletQty.Location = New System.Drawing.Point(828, 656)
+        Me.TXT_CurRedPalletQty.Location = New System.Drawing.Point(722, 655)
         Me.TXT_CurRedPalletQty.Name = "TXT_CurRedPalletQty"
         Me.TXT_CurRedPalletQty.Size = New System.Drawing.Size(248, 24)
         Me.TXT_CurRedPalletQty.TabIndex = 234
@@ -149,7 +155,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(560, 634)
+        Me.Panel2.Location = New System.Drawing.Point(455, 634)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(268, 22)
         Me.Panel2.TabIndex = 230
@@ -222,7 +228,7 @@ Partial Class UC_OperatorDigiPress
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(356, 698)
+        Me.Label8.Location = New System.Drawing.Point(257, 691)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(63, 16)
         Me.Label8.TabIndex = 237
@@ -232,7 +238,7 @@ Partial Class UC_OperatorDigiPress
         '
         Me.TXT_Remarks.Enabled = False
         Me.TXT_Remarks.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_Remarks.Location = New System.Drawing.Point(424, 693)
+        Me.TXT_Remarks.Location = New System.Drawing.Point(325, 686)
         Me.TXT_Remarks.Margin = New System.Windows.Forms.Padding(2)
         Me.TXT_Remarks.Multiline = True
         Me.TXT_Remarks.Name = "TXT_Remarks"
@@ -244,7 +250,7 @@ Partial Class UC_OperatorDigiPress
         Me.TXT_CurSpoilageQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TXT_CurSpoilageQty.Enabled = False
         Me.TXT_CurSpoilageQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_CurSpoilageQty.Location = New System.Drawing.Point(1076, 656)
+        Me.TXT_CurSpoilageQty.Location = New System.Drawing.Point(969, 655)
         Me.TXT_CurSpoilageQty.Name = "TXT_CurSpoilageQty"
         Me.TXT_CurSpoilageQty.Size = New System.Drawing.Size(251, 24)
         Me.TXT_CurSpoilageQty.TabIndex = 235
@@ -255,7 +261,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel12.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel12.Controls.Add(Me.Label21)
-        Me.Panel12.Location = New System.Drawing.Point(360, 656)
+        Me.Panel12.Location = New System.Drawing.Point(256, 655)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(200, 24)
         Me.Panel12.TabIndex = 220
@@ -276,7 +282,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel14.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel14.Controls.Add(Me.Label24)
-        Me.Panel14.Location = New System.Drawing.Point(560, 611)
+        Me.Panel14.Location = New System.Drawing.Point(455, 611)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(268, 24)
         Me.Panel14.TabIndex = 222
@@ -298,7 +304,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel15.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel15.Controls.Add(Me.Label25)
-        Me.Panel15.Location = New System.Drawing.Point(828, 611)
+        Me.Panel15.Location = New System.Drawing.Point(722, 611)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(248, 24)
         Me.Panel15.TabIndex = 223
@@ -319,7 +325,7 @@ Partial Class UC_OperatorDigiPress
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TXT_Acknowledge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TXT_Acknowledge.Enabled = False
-        Me.TXT_Acknowledge.Location = New System.Drawing.Point(1327, 655)
+        Me.TXT_Acknowledge.Location = New System.Drawing.Point(1470, 655)
         Me.TXT_Acknowledge.Margin = New System.Windows.Forms.Padding(2)
         Me.TXT_Acknowledge.Multiline = True
         Me.TXT_Acknowledge.Name = "TXT_Acknowledge"
@@ -355,7 +361,7 @@ Partial Class UC_OperatorDigiPress
         Me.TXT_CurGoodQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TXT_CurGoodQty.Enabled = False
         Me.TXT_CurGoodQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_CurGoodQty.Location = New System.Drawing.Point(560, 656)
+        Me.TXT_CurGoodQty.Location = New System.Drawing.Point(455, 655)
         Me.TXT_CurGoodQty.Name = "TXT_CurGoodQty"
         Me.TXT_CurGoodQty.Size = New System.Drawing.Size(268, 24)
         Me.TXT_CurGoodQty.TabIndex = 233
@@ -366,7 +372,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Location = New System.Drawing.Point(1076, 634)
+        Me.Panel5.Location = New System.Drawing.Point(969, 634)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(251, 22)
         Me.Panel5.TabIndex = 232
@@ -397,7 +403,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel13.Controls.Add(Me.Label23)
         Me.Panel13.Controls.Add(Me.Label22)
-        Me.Panel13.Location = New System.Drawing.Point(1327, 611)
+        Me.Panel13.Location = New System.Drawing.Point(1470, 611)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(154, 45)
         Me.Panel13.TabIndex = 221
@@ -439,7 +445,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(828, 634)
+        Me.Panel3.Location = New System.Drawing.Point(722, 634)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(248, 22)
         Me.Panel3.TabIndex = 231
@@ -499,7 +505,7 @@ Partial Class UC_OperatorDigiPress
         Me.Panel16.BackColor = System.Drawing.SystemColors.HighlightText
         Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel16.Controls.Add(Me.Label26)
-        Me.Panel16.Location = New System.Drawing.Point(1076, 611)
+        Me.Panel16.Location = New System.Drawing.Point(969, 611)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(251, 24)
         Me.Panel16.TabIndex = 224
@@ -510,7 +516,7 @@ Partial Class UC_OperatorDigiPress
         Me.BTN_Recalculate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTN_Recalculate.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_Recalculate.ForeColor = System.Drawing.Color.White
-        Me.BTN_Recalculate.Location = New System.Drawing.Point(359, 611)
+        Me.BTN_Recalculate.Location = New System.Drawing.Point(255, 611)
         Me.BTN_Recalculate.Name = "BTN_Recalculate"
         Me.BTN_Recalculate.Size = New System.Drawing.Size(201, 45)
         Me.BTN_Recalculate.TabIndex = 238
@@ -803,20 +809,63 @@ Partial Class UC_OperatorDigiPress
         Me.cscas.HeaderText = "TOTAL"
         Me.cscas.Name = "cscas"
         '
-        'Label3
+        'TextBox1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(661, 755)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 243
-        Me.Label3.Text = "Label3"
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(1219, 655)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(251, 24)
+        Me.TextBox1.TabIndex = 246
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Location = New System.Drawing.Point(1219, 634)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(251, 22)
+        Me.Panel1.TabIndex = 245
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(96, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(62, 13)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "QUANTITY"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Location = New System.Drawing.Point(1219, 611)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(251, 24)
+        Me.Panel4.TabIndex = 244
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(65, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(122, 13)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "CLEANING SHEETS"
         '
         'UC_OperatorDigiPress
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.TXT_CurRedPalletQty)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label2)
@@ -867,6 +916,10 @@ Partial Class UC_OperatorDigiPress
         Me.Panel16.ResumeLayout(False)
         Me.Panel16.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -941,5 +994,9 @@ Partial Class UC_OperatorDigiPress
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents cscas As DataGridViewTextBoxColumn
-    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label9 As Label
 End Class

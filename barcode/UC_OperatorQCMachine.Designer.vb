@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UC_OperatorQCMachine
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UC_OperatorQCMachine
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,6 +38,16 @@ Partial Class UC_OperatorQCMachine
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGV_Time1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_CuttingBladeSharp1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_CuttingBladeCon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_LooseFiqty1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_LooseFi1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QTY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_OffSquareQTY1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGV_OffSquare1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TXT_Total = New System.Windows.Forms.TextBox()
         Me.TXT_ResNo = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -75,16 +85,6 @@ Partial Class UC_OperatorQCMachine
         Me.TXT_CurQty = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.DGV_Time1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_CuttingBladeSharp1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_CuttingBladeCon = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_LooseFiqty1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_LooseFi1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QTY = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_OffSquareQTY1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DGV_OffSquare1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -155,6 +155,99 @@ Partial Class UC_OperatorQCMachine
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1676, 464)
         Me.DataGridView1.TabIndex = 150
+        '
+        'DGV_Time1
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_Time1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DGV_Time1.HeaderText = "TIME"
+        Me.DGV_Time1.Name = "DGV_Time1"
+        Me.DGV_Time1.ReadOnly = True
+        '
+        'DGV_CuttingBladeSharp1
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_CuttingBladeSharp1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGV_CuttingBladeSharp1.FillWeight = 10.0!
+        Me.DGV_CuttingBladeSharp1.HeaderText = "Alignment"
+        Me.DGV_CuttingBladeSharp1.Name = "DGV_CuttingBladeSharp1"
+        Me.DGV_CuttingBladeSharp1.ReadOnly = True
+        Me.DGV_CuttingBladeSharp1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_CuttingBladeSharp1.Width = 200
+        '
+        'DGV_CuttingBladeCon
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_CuttingBladeCon.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DGV_CuttingBladeCon.HeaderText = "Feeder Gauge Setting (one piece actual carton)"
+        Me.DGV_CuttingBladeCon.Name = "DGV_CuttingBladeCon"
+        Me.DGV_CuttingBladeCon.ReadOnly = True
+        Me.DGV_CuttingBladeCon.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_CuttingBladeCon.Width = 200
+        '
+        'DGV_LooseFiqty1
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_LooseFiqty1.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DGV_LooseFiqty1.HeaderText = "Tag points"
+        Me.DGV_LooseFiqty1.Name = "DGV_LooseFiqty1"
+        Me.DGV_LooseFiqty1.ReadOnly = True
+        Me.DGV_LooseFiqty1.Width = 200
+        '
+        'Column1
+        '
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column1.HeaderText = "Qty of defects"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 200
+        '
+        'DGV_LooseFi1
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_LooseFi1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DGV_LooseFi1.HeaderText = "Scratches"
+        Me.DGV_LooseFi1.Name = "DGV_LooseFi1"
+        Me.DGV_LooseFi1.ReadOnly = True
+        Me.DGV_LooseFi1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_LooseFi1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DGV_LooseFi1.Width = 200
+        '
+        'QTY
+        '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.QTY.DefaultCellStyle = DataGridViewCellStyle7
+        Me.QTY.HeaderText = "Qty of defects"
+        Me.QTY.Name = "QTY"
+        Me.QTY.Width = 200
+        '
+        'DGV_OffSquareQTY1
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_OffSquareQTY1.DefaultCellStyle = DataGridViewCellStyle8
+        Me.DGV_OffSquareQTY1.HeaderText = "Crumpled"
+        Me.DGV_OffSquareQTY1.Name = "DGV_OffSquareQTY1"
+        Me.DGV_OffSquareQTY1.ReadOnly = True
+        Me.DGV_OffSquareQTY1.Width = 200
+        '
+        'Column2
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Column2.HeaderText = "Qty of defects"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 200
+        '
+        'DGV_OffSquare1
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_OffSquare1.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DGV_OffSquare1.HeaderText = "TOTAL"
+        Me.DGV_OffSquare1.Name = "DGV_OffSquare1"
+        Me.DGV_OffSquare1.ReadOnly = True
+        Me.DGV_OffSquare1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_OffSquare1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DGV_OffSquare1.Width = 200
         '
         'TXT_Total
         '
@@ -539,99 +632,6 @@ Partial Class UC_OperatorQCMachine
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(251, 24)
         Me.Panel16.TabIndex = 162
-        '
-        'DGV_Time1
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_Time1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DGV_Time1.HeaderText = "TIME"
-        Me.DGV_Time1.Name = "DGV_Time1"
-        Me.DGV_Time1.ReadOnly = True
-        '
-        'DGV_CuttingBladeSharp1
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_CuttingBladeSharp1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DGV_CuttingBladeSharp1.FillWeight = 10.0!
-        Me.DGV_CuttingBladeSharp1.HeaderText = "Alignment"
-        Me.DGV_CuttingBladeSharp1.Name = "DGV_CuttingBladeSharp1"
-        Me.DGV_CuttingBladeSharp1.ReadOnly = True
-        Me.DGV_CuttingBladeSharp1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_CuttingBladeSharp1.Width = 200
-        '
-        'DGV_CuttingBladeCon
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_CuttingBladeCon.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DGV_CuttingBladeCon.HeaderText = "Feeder Gauge Setting (one piece actual carton)"
-        Me.DGV_CuttingBladeCon.Name = "DGV_CuttingBladeCon"
-        Me.DGV_CuttingBladeCon.ReadOnly = True
-        Me.DGV_CuttingBladeCon.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_CuttingBladeCon.Width = 200
-        '
-        'DGV_LooseFiqty1
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_LooseFiqty1.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DGV_LooseFiqty1.HeaderText = "Tag points"
-        Me.DGV_LooseFiqty1.Name = "DGV_LooseFiqty1"
-        Me.DGV_LooseFiqty1.ReadOnly = True
-        Me.DGV_LooseFiqty1.Width = 200
-        '
-        'Column1
-        '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Column1.HeaderText = "Qty of defects"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 200
-        '
-        'DGV_LooseFi1
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_LooseFi1.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DGV_LooseFi1.HeaderText = "Scratches"
-        Me.DGV_LooseFi1.Name = "DGV_LooseFi1"
-        Me.DGV_LooseFi1.ReadOnly = True
-        Me.DGV_LooseFi1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_LooseFi1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DGV_LooseFi1.Width = 200
-        '
-        'QTY
-        '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.QTY.DefaultCellStyle = DataGridViewCellStyle7
-        Me.QTY.HeaderText = "Qty of defects"
-        Me.QTY.Name = "QTY"
-        Me.QTY.Width = 200
-        '
-        'DGV_OffSquareQTY1
-        '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_OffSquareQTY1.DefaultCellStyle = DataGridViewCellStyle8
-        Me.DGV_OffSquareQTY1.HeaderText = "Crumpled"
-        Me.DGV_OffSquareQTY1.Name = "DGV_OffSquareQTY1"
-        Me.DGV_OffSquareQTY1.ReadOnly = True
-        Me.DGV_OffSquareQTY1.Width = 200
-        '
-        'Column2
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle9
-        Me.Column2.HeaderText = "Qty of defects"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 200
-        '
-        'DGV_OffSquare1
-        '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DGV_OffSquare1.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DGV_OffSquare1.HeaderText = "TOTAL"
-        Me.DGV_OffSquare1.Name = "DGV_OffSquare1"
-        Me.DGV_OffSquare1.ReadOnly = True
-        Me.DGV_OffSquare1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_OffSquare1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DGV_OffSquare1.Width = 200
         '
         'UC_OperatorQCMachine
         '
