@@ -5,11 +5,11 @@ Imports System.Data
 Imports System.Configuration
 Imports System.Security.Cryptography
 Module globalvariable
-    Public app_version As String = "4.4" 'Changed from 4.3 to 4.4
+
+    Public app_version As String = "4.5" 'Changed from 4.4 to 4.5 [FIX] Add Finishing Daily Output Report
 
     Public maintenance_version As String
-
-
+    
     Public userid As String
     Public section As String
     Public position As String
