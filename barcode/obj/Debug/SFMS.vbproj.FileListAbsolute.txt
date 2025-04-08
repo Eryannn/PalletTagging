@@ -649,3 +649,4 @@ C:\Projects\PalletTagging\barcode\obj\Debug\barcode.UC_SupervisorStripping.resou
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.vbproj.GenerateResource.Cache
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.exe.manifest
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.application
+C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.vbprojResolveAssemblyReference.cache

@@ -15,7 +15,6 @@ Public Class FRM_ProcessJob
             ' Enable the button if all textboxes have values
 
             If section = "FINISHING" Then
-
                 BTN_AddFinishingDailyOut.Enabled = True
                 BTN_AddMonitoringChecklist.Enabled = True
                 btn_generateqr.Enabled = True
@@ -34,6 +33,11 @@ Public Class FRM_ProcessJob
                 btn_generateqr.Enabled = True
                 btn_printpallet.Enabled = True
             ElseIf section = "CUTTING"
+                BTN_AddFinishingDailyOut.Enabled = True
+                BTN_AddMonitoringChecklist.Enabled = True
+                btn_generateqr.Enabled = True
+                btn_printpallet.Enabled = True
+            ElseIf section = "MANUAL FINISHING" AndAlso txt_machine.Text = "P-MF-MANPOWER" Or txt_machine.Text = "P-MS-MANPOWER"
                 BTN_AddFinishingDailyOut.Enabled = True
                 BTN_AddMonitoringChecklist.Enabled = True
                 btn_generateqr.Enabled = True
@@ -823,6 +827,8 @@ Public Class FRM_ProcessJob
                         section_code = "GL"
                     ElseIf section = "DIGITAL PRESS" Then
                         section_code = "DP"
+                    ElseIf section = "MANUAL FINISHING" Then
+                        section_code = "FI"
                     ElseIf section = "FINISHING" Then
                         section_code = "FI"
                     Else
