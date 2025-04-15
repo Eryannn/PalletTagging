@@ -651,9 +651,6 @@ C:\Projects\PalletTaggingErian\barcode\obj\Debug\SFMS.vbproj.GenerateResource.Ca
 C:\Projects\PalletTaggingErian\barcode\obj\Debug\SFMS.exe.manifest
 C:\Projects\PalletTaggingErian\barcode\obj\Debug\SFMS.application
 C:\Projects\PalletTagging\barcode\bin\Debug\SFMS.exe.config
-C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.exe
-C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.xml
-C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.pdb
 C:\Projects\PalletTagging\barcode\bin\Debug\SFMS.exe.manifest
 C:\Projects\PalletTagging\barcode\bin\Debug\SFMS.application
 C:\Projects\PalletTagging\barcode\bin\Debug\SFMS.exe
@@ -739,7 +736,6 @@ C:\Projects\PalletTagging\barcode\bin\Debug\pt\Microsoft.SqlServer.Types.resourc
 C:\Projects\PalletTagging\barcode\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Projects\PalletTagging\barcode\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Projects\PalletTagging\barcode\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.vbprojResolveAssemblyReference.cache
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.vbproj.SFMS.exe.config
 C:\Projects\PalletTagging\barcode\obj\Debug\barcode.Form1.resources
 C:\Projects\PalletTagging\barcode\obj\Debug\barcode.Form2.resources
@@ -813,3 +809,6 @@ C:\Projects\PalletTagging\barcode\obj\Debug\barcode.UC_SupervisorStripping.resou
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.vbproj.GenerateResource.Cache
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.exe.manifest
 C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.application
+C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.exe
+C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.xml
+C:\Projects\PalletTagging\barcode\obj\Debug\SFMS.pdb
