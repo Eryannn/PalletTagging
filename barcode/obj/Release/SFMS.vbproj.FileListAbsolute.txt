@@ -326,3 +326,4 @@ C:\Projects\PalletTaggingErian\barcode\bin\Release\SFMS.exe.config
 C:\Projects\PalletTaggingErian\barcode\obj\Release\SFMS.exe
 C:\Projects\PalletTaggingErian\barcode\obj\Release\SFMS.xml
 C:\Projects\PalletTaggingErian\barcode\obj\Release\SFMS.pdb
+C:\Projects\PalletTagging\barcode\obj\Release\SFMS.vbprojResolveAssemblyReference.cache
