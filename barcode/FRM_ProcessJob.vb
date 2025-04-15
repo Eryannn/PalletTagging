@@ -7,6 +7,14 @@ Imports ZXing
 Imports System.Windows.Forms
 Public Class FRM_ProcessJob
 
+    '4.5 Added Clean Code for Exiting Form
+    Private LogoutBTNInitiated As Boolean = False
+    Private Sub FRM_ProcessJob_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not LogoutBTNInitiated AndAlso e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True ' Cancel the close so we can call logout logic
+        End If
+    End Sub
+
     Private Sub UpdateButtonState()
         ' Check if all textboxes have text
         If Not String.IsNullOrWhiteSpace(txt_machine.Text) AndAlso
@@ -946,6 +954,7 @@ Public Class FRM_ProcessJob
     End Sub
 
     Private Sub BTN_Logout_Click(sender As Object, e As EventArgs) Handles BTN_Logout.Click
+        LogoutBTNInitiated = True
         Form1.Show()
         FRM_MonitoringChecklistMain.Close()
         empnum = cleartext()
@@ -1216,65 +1225,65 @@ Public Class FRM_ProcessJob
 
         'If section = "CUTTING" Or section = "DIE CUTTING" Or section = "OFFSET" Or section = "LAMINATION" Then
         If position = "Supervisor" Then
-                'FRM_MonitoringChecklistMain.txt_operator.Text = ""
+            'FRM_MonitoringChecklistMain.txt_operator.Text = ""
 
 
 
-                Me.Hide()
-                FRM_MonitoringChecklistMain.Show()
+            Me.Hide()
+            FRM_MonitoringChecklistMain.Show()
 
 
-                For i = 0 To 0
-                    FRM_MonitoringChecklistMain.PNL_MonitoringChecklistOperatorMain.Controls.RemoveAt(i)
-                Next
+            For i = 0 To 0
+                FRM_MonitoringChecklistMain.PNL_MonitoringChecklistOperatorMain.Controls.RemoveAt(i)
+            Next
 
-                'FOR CUTTING
-                Dim UC_SupervisorFinishing As New UC_SupervisorFinishing
-                UC_SupervisorFinishing.Parent = FRM_MonitoringChecklistMain.PNL_MonitoringChecklistOperatorMain
-                UC_SupervisorFinishing.Show()
-                UC_SupervisorFinishing.Dock = DockStyle.Fill
+            'FOR CUTTING
+            Dim UC_SupervisorFinishing As New UC_SupervisorFinishing
+            UC_SupervisorFinishing.Parent = FRM_MonitoringChecklistMain.PNL_MonitoringChecklistOperatorMain
+            UC_SupervisorFinishing.Show()
+            UC_SupervisorFinishing.Dock = DockStyle.Fill
 
 
 
-                FRM_MonitoringChecklistMain.BTN_Supervisor.ForeColor = Color.DodgerBlue
-                FRM_MonitoringChecklistMain.BTN_Supervisor.BackColor = Color.White
+            FRM_MonitoringChecklistMain.BTN_Supervisor.ForeColor = Color.DodgerBlue
+            FRM_MonitoringChecklistMain.BTN_Supervisor.BackColor = Color.White
 
-                'changed color to black
+            'changed color to black
 
-                FRM_MonitoringChecklistMain.BTN_Operator.ForeColor = Color.Black
-                FRM_MonitoringChecklistMain.BTN_Operator.BackColor = Color.WhiteSmoke
+            FRM_MonitoringChecklistMain.BTN_Operator.ForeColor = Color.Black
+            FRM_MonitoringChecklistMain.BTN_Operator.BackColor = Color.WhiteSmoke
 
-                FRM_MonitoringChecklistMain.BTN_SuperIntendent.ForeColor = Color.Black
-                FRM_MonitoringChecklistMain.BTN_SuperIntendent.BackColor = Color.WhiteSmoke
+            FRM_MonitoringChecklistMain.BTN_SuperIntendent.ForeColor = Color.Black
+            FRM_MonitoringChecklistMain.BTN_SuperIntendent.BackColor = Color.WhiteSmoke
 
-                FRM_MonitoringChecklistMain.BTN_NxtProcess.ForeColor = Color.Black
-                FRM_MonitoringChecklistMain.BTN_NxtProcess.BackColor = Color.WhiteSmoke
-            Else
-                Try
-                    Using con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
-                        con.Open()
-                        Using cmd As New SqlCommand("SELECT * FROM sppmcHdr WHERE Site = @Site And mcnum = @mcnum And emp_num = @emp_num", con)
-                            cmd.CommandType = CommandType.Text
-                            With cmd.Parameters
-                                .Clear()
-                                .AddWithValue("@Site", Form1.cmb_site.Text)
-                                .AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
-                                .AddWithValue("@emp_num", FRM_MonitoringChecklistMain.lbl_empnum.Text)
-                            End With
-                            Using dr As SqlDataReader = cmd.ExecuteReader()
-                                If dr.HasRows Then
-                                    dr.Close()
-                                    'FRM_MonitoringChecklistMain.txt_operator.Text = lbl_empname.Text
-                                    FRM_MonitoringChecklistMain.BTN_AddMCNo.Enabled = False
-                                End If
-                            End Using
+            FRM_MonitoringChecklistMain.BTN_NxtProcess.ForeColor = Color.Black
+            FRM_MonitoringChecklistMain.BTN_NxtProcess.BackColor = Color.WhiteSmoke
+        Else
+            Try
+                Using con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
+                    con.Open()
+                    Using cmd As New SqlCommand("SELECT * FROM sppmcHdr WHERE Site = @Site And mcnum = @mcnum And emp_num = @emp_num", con)
+                        cmd.CommandType = CommandType.Text
+                        With cmd.Parameters
+                            .Clear()
+                            .AddWithValue("@Site", Form1.cmb_site.Text)
+                            .AddWithValue("@mcnum", FRM_MonitoringChecklistMain.TXT_MCNO.Text)
+                            .AddWithValue("@emp_num", FRM_MonitoringChecklistMain.lbl_empnum.Text)
+                        End With
+                        Using dr As SqlDataReader = cmd.ExecuteReader()
+                            If dr.HasRows Then
+                                dr.Close()
+                                'FRM_MonitoringChecklistMain.txt_operator.Text = lbl_empname.Text
+                                FRM_MonitoringChecklistMain.BTN_AddMCNo.Enabled = False
+                            End If
                         End Using
                     End Using
-                    Me.Hide()
-                    FRM_MonitoringChecklistMain.Show()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+                End Using
+                Me.Hide()
+                FRM_MonitoringChecklistMain.Show()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
 
 

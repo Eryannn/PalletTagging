@@ -35,6 +35,16 @@ Public Class Form2
         Return Wc
     End Function
 
+    '4.5 Added Clean Code for Exiting Form
+    Private BackBTNInitiated As Boolean = False
+    Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not BackBTNInitiated AndAlso e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True ' Cancel the close so we can call logout logic
+            btnlogout_Click_1(sender, e)
+        End If
+    End Sub
+
+
 
     Private Sub bindgrid()
 
@@ -1137,6 +1147,7 @@ Public Class Form2
 
     End Sub
     Private Sub btnlogout_Click_1(sender As Object, e As EventArgs) Handles btnlogout.Click
+        BackBTNInitiated = True
         Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
         Try
             con.Open()
@@ -1284,13 +1295,25 @@ Public Class Form2
         Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
         Dim selectedrows As New List(Of Integer)
 
+        '4.5 Added Condition if there's no selected tag
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
+                selectedrows.Add(i)
+            End If
+        Next
+
+        If selectedrows.Count = 0 Then
+            MsgBox("Select a Tag first")
+            Exit Sub
+        End If
+
         Try
             con.Open()
-            For i As Integer = 0 To DataGridView1.Rows.Count - 1
-                If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
-                    selectedrows.Add(i)
-                End If
-            Next
+            'For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            '    If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
+            '        selectedrows.Add(i)
+            '    End If
+            'Next
 
             Dim report4 As New CrystalReport4
             Dim user As String = "sa"
@@ -1321,7 +1344,6 @@ Public Class Form2
         Finally
             con.Close()
         End Try
-
 
     End Sub
 
@@ -1445,39 +1467,40 @@ Public Class Form2
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
-        Try
-            con.Open()
-            Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
-            Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
+        btnlogout_Click_1(sender, e)
+        'Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
+        'Try
+        '    con.Open()
+        '    Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        '    Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
 
-            cmd.Parameters.AddWithValue("name", txtoper_name.Text)
-            cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
-            cmd.Parameters.AddWithValue("job", txtjoborder.Text)
-            cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
-            cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
+        '    cmd.Parameters.AddWithValue("name", txtoper_name.Text)
+        '    cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
+        '    cmd.Parameters.AddWithValue("job", txtjoborder.Text)
+        '    cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
+        '    cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
 
-            cmd1.Parameters.AddWithValue("name", txtoper_namet3.Text)
-            cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
-            cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
-            cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
-            cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
+        '    cmd1.Parameters.AddWithValue("name", txtoper_namet3.Text)
+        '    cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
+        '    cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
+        '    cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
+        '    cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
 
-            cmd.ExecuteNonQuery()
-            cmd1.ExecuteNonQuery()
-            'Form1.txtpassword.Clear()
-            'Form1.cmbuserid.SelectedValue = 0
-            'Form.Show()
-            FRM_ProcessJob.Show()
-            FRM_ProcessJob.txt_joborder.Text = joborder
-            FRM_ProcessJob.txt_suffix.Text = suffix
-            FRM_ProcessJob.txt_opernum.Text = oper_num
-            Me.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            con.Close()
-        End Try
+        '    cmd.ExecuteNonQuery()
+        '    cmd1.ExecuteNonQuery()
+        '    'Form1.txtpassword.Clear()
+        '    'Form1.cmbuserid.SelectedValue = 0
+        '    'Form.Show()
+        '    FRM_ProcessJob.Show()
+        '    FRM_ProcessJob.txt_joborder.Text = joborder
+        '    FRM_ProcessJob.txt_suffix.Text = suffix
+        '    FRM_ProcessJob.txt_opernum.Text = oper_num
+        '    Me.Close()
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'Finally
+        '    con.Close()
+        'End Try
     End Sub
     Private Sub ComboBox1_Click(sender As Object, e As EventArgs)
         ComboBox2.SelectedIndex = -1
@@ -3237,41 +3260,42 @@ Public Class Form2
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
-        Try
-            con.Open()
-            'Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
-            ' Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
-            Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
-            Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
+        btnlogout_Click_1(sender, e)
+        'Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
+        'Try
+        '    con.Open()
+        '    'Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        '    ' Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
+        '    Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        '    Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
 
-            cmd.Parameters.AddWithValue("name", txtoper_name.Text)
-            cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
-            cmd.Parameters.AddWithValue("job", txtjoborder.Text)
-            cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
-            cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
+        '    cmd.Parameters.AddWithValue("name", txtoper_name.Text)
+        '    cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
+        '    cmd.Parameters.AddWithValue("job", txtjoborder.Text)
+        '    cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
+        '    cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
 
-            cmd1.Parameters.AddWithValue("name", txtoper_namet3.Text)
-            cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
-            cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
-            cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
-            cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
+        '    cmd1.Parameters.AddWithValue("name", txtoper_namet3.Text)
+        '    cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
+        '    cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
+        '    cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
+        '    cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
 
-            cmd.ExecuteNonQuery()
-            cmd1.ExecuteNonQuery()
-            'Form1.txtpassword.Clear()
-            'Form1.cmbuserid.SelectedValue = 0
-            'Form1.Show()
-            FRM_ProcessJob.Show()
-            FRM_ProcessJob.txt_joborder.Text = joborder
-            FRM_ProcessJob.txt_suffix.Text = suffix
-            FRM_ProcessJob.txt_opernum.Text = oper_num
-            Me.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            con.Close()
-        End Try
+        '    cmd.ExecuteNonQuery()
+        '    cmd1.ExecuteNonQuery()
+        '    'Form1.txtpassword.Clear()
+        '    'Form1.cmbuserid.SelectedValue = 0
+        '    'Form1.Show()
+        '    FRM_ProcessJob.Show()
+        '    FRM_ProcessJob.txt_joborder.Text = joborder
+        '    FRM_ProcessJob.txt_suffix.Text = suffix
+        '    FRM_ProcessJob.txt_opernum.Text = oper_num
+        '    Me.Close()
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'Finally
+        '    con.Close()
+        'End Try
     End Sub
 
     Private Sub btnprintcuttags_Click(sender As Object, e As EventArgs) Handles btnprintcuttags.Click
@@ -3280,11 +3304,16 @@ Public Class Form2
 
         Try
             con.Open()
+            '4.5 Added Condition if there's no selected tag'
             For i As Integer = 0 To DataGridView1.Rows.Count - 1
                 If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
                     selectedrows.Add(i)
                 End If
             Next
+            If selectedrows.Count = 0 Then
+                MsgBox("Select a Tag first")
+                Exit Sub
+            End If
 
             Dim report6 As New CrystalReport6
             Dim user As String = "sa"
@@ -3906,47 +3935,48 @@ Public Class Form2
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
-        Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
-        Try
-            con.Open()
-            'Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
-            ' Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
-            Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
-            Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
-            Dim cmd2 As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        btnlogout_Click_1(sender, e)
+        'Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
+        'Try
+        '    con.Open()
+        '    'Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where name=@name AND emp_num = @empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        '    ' Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where Name=@name and Emp_num=@empnum AND job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
+        '    Dim cmd As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
+        '    Dim cmd1 As New SqlCommand("Update NCFPtag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum and [Select] = 1", con)
+        '    Dim cmd2 As New SqlCommand("Update Ptag_line set [Select] = 0 where job=@job AND suffix=@suffix AND Oper_num=@opernum AND [Select] = 1", con)
 
-            cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
-            cmd.Parameters.AddWithValue("job", txtjoborder.Text)
-            cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
-            cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
+        '    cmd.Parameters.AddWithValue("empnum", txtoper_num.Text)
+        '    cmd.Parameters.AddWithValue("job", txtjoborder.Text)
+        '    cmd.Parameters.AddWithValue("suffix", txtjobsuffix.Text)
+        '    cmd.Parameters.AddWithValue("opernum", txtjoboperation.Text)
 
 
-            cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
-            cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
-            cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
-            cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
+        '    cmd1.Parameters.AddWithValue("empnum", txtoper_numt3.Text)
+        '    cmd1.Parameters.AddWithValue("job", txtjobordert3.Text)
+        '    cmd1.Parameters.AddWithValue("suffix", txtjobsuffixt3.Text)
+        '    cmd1.Parameters.AddWithValue("opernum", txtjoboperationt3.Text)
 
-            cmd2.Parameters.AddWithValue("empnum", txtempnum_subcon.Text)
-            cmd2.Parameters.AddWithValue("job", txtjob_subcon.Text)
-            cmd2.Parameters.AddWithValue("suffix", txtsuffix_subcon.Text)
-            cmd2.Parameters.AddWithValue("opernum", txtopernum_subcon.Text)
+        '    cmd2.Parameters.AddWithValue("empnum", txtempnum_subcon.Text)
+        '    cmd2.Parameters.AddWithValue("job", txtjob_subcon.Text)
+        '    cmd2.Parameters.AddWithValue("suffix", txtsuffix_subcon.Text)
+        '    cmd2.Parameters.AddWithValue("opernum", txtopernum_subcon.Text)
 
-            cmd.ExecuteNonQuery()
-            cmd1.ExecuteNonQuery()
-            cmd2.ExecuteNonQuery()
-            'Form1.txtpassword.Clear()
-            'Form1.cmbuserid.SelectedValue = 0
-            'Form1.Show()
-            FRM_ProcessJob.Show()
-            FRM_ProcessJob.txt_joborder.Text = joborder
-            FRM_ProcessJob.txt_suffix.Text = suffix
-            FRM_ProcessJob.txt_opernum.Text = oper_num
-            Me.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            con.Close()
-        End Try
+        '    cmd.ExecuteNonQuery()
+        '    cmd1.ExecuteNonQuery()
+        '    cmd2.ExecuteNonQuery()
+        '    'Form1.txtpassword.Clear()
+        '    'Form1.cmbuserid.SelectedValue = 0
+        '    'Form1.Show()
+        '    FRM_ProcessJob.Show()
+        '    FRM_ProcessJob.txt_joborder.Text = joborder
+        '    FRM_ProcessJob.txt_suffix.Text = suffix
+        '    FRM_ProcessJob.txt_opernum.Text = oper_num
+        '    Me.Close()
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'Finally
+        '    con.Close()
+        'End Try
     End Sub
 
     Private Sub Button9_Click_1(sender As Object, e As EventArgs) Handles Button9.Click
@@ -4191,14 +4221,19 @@ Public Class Form2
         Dim con As New SqlConnection("Data Source=ERP-SVR;Initial Catalog=Pallet_Tagging;User ID=sa;Password=pi_dc_2011")
         Dim selectedrows As New List(Of Integer)
 
+        '4.5 Added Condition if there's no selected tag'
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
+                selectedrows.Add(i)
+            End If
+        Next
+        If selectedrows.Count = 0 Then
+            MsgBox("Select a Tag first")
+            Exit Sub
+        End If
+
         Try
             con.Open()
-            For i As Integer = 0 To DataGridView1.Rows.Count - 1
-                If DataGridView1.Rows(i).Cells(0).Value IsNot Nothing AndAlso CBool(DataGridView1.Rows(i).Cells(0).Value) = True Then
-                    selectedrows.Add(i)
-                End If
-            Next
-
             Dim report4 As New CrystalReport_QRCODE
             Dim user As String = "sa"
             Dim pwd As String = "pi_dc_2011"
@@ -4245,7 +4280,7 @@ Public Class Form2
     End Sub
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-
+        btnlogout_Click_1(sender, e)
         'If position = "Marketing" Then
         '    Form1.Show()
         '    MsgBox()
@@ -4259,9 +4294,9 @@ Public Class Form2
         '    Me.Close()
         'End If
 
-        MsgBox(position)
-        MsgBox(empname)
-
+        'MsgBox(position)
+        'MsgBox(empname)
+        Me.Close()
     End Sub
 
     Private Sub txtnumout_TextChanged(sender As Object, e As EventArgs) Handles txtnumout.TextChanged

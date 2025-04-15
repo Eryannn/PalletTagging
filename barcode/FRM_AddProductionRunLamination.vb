@@ -318,7 +318,7 @@
 
 
 
-        '''Glue Load
+        'Glue Load
         'Dim prr_LAGluld0700to0800Decimal As Double
         'Dim prr_LAGluld0730to0830Decimal As Double
         'Dim prr_LAGluld0900to1000Decimal As Double

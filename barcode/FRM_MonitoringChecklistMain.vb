@@ -4,13 +4,10 @@ Imports ZXing
 
 Public Class FRM_MonitoringChecklistMain
 
-
-
-
-
-
-
-
+    '4.5 Added Clean Code for Exiting Form
+    Private Sub FRM_MonitoringChecklistMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        FRM_ProcessJob.Show()
+    End Sub
 
     Public mcnum_output As Boolean
 
@@ -19,14 +16,7 @@ Public Class FRM_MonitoringChecklistMain
     Private lastNumber As Integer = 0
 
 
-
-
-
-
-
-
     Private Sub FRM_MonitoringChecklistMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
 
         If section = "GLUING" AndAlso txt_machine.Text.StartsWith("P-LAMINA") Then
             LBL_SectionName.Text = "GLUING LAMINA"

@@ -4,9 +4,14 @@ Public Class FRM_MonitoringChecklistSummary
     Dim CreatedBySupervisor As String
 
 
-
-
-
+    '4.5 Added Clean Code for Exiting Form
+    Private BackBTNInitiated As Boolean = False
+    Private Sub FRM_MonitoringChecklistSummary_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not BackBTNInitiated AndAlso e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True ' Cancel the close so we can call logout logic
+            BTN_Back_Click(sender, e)
+        End If
+    End Sub
 
 
     Private Sub BTN_Process_Click(sender As Object, e As EventArgs) Handles BTN_Process.Click
@@ -129,7 +134,7 @@ Public Class FRM_MonitoringChecklistSummary
 
     Private Sub BTN_Back_Click(sender As Object, e As EventArgs) Handles BTN_Back.Click
 
-
+        BackBTNInitiated = True
         FRM_ProcessJob.Show()
         Me.Close()
 

@@ -444,6 +444,7 @@ Partial Class FRM_ProcessJob
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.PNL_InfoProcessJob)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FRM_ProcessJob"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

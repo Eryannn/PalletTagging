@@ -24,7 +24,7 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.cmbsection_schedule = New System.Windows.Forms.ComboBox()
@@ -420,15 +420,15 @@ Partial Class Form2
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(1)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(1)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(17, 404)
         Me.DataGridView2.Name = "DataGridView2"
@@ -1151,7 +1151,7 @@ Partial Class Form2
         Me.btnlogout.Name = "btnlogout"
         Me.btnlogout.Size = New System.Drawing.Size(121, 62)
         Me.btnlogout.TabIndex = 108
-        Me.btnlogout.Text = "Logout"
+        Me.btnlogout.Text = "Back"
         Me.btnlogout.UseVisualStyleBackColor = False
         '
         'txtnextop
@@ -1669,7 +1669,7 @@ Partial Class Form2
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(121, 62)
         Me.Button17.TabIndex = 148
-        Me.Button17.Text = "Logout"
+        Me.Button17.Text = "Back"
         Me.Button17.UseVisualStyleBackColor = False
         '
         'Button16
@@ -2319,7 +2319,7 @@ Partial Class Form2
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(121, 62)
         Me.Button19.TabIndex = 208
-        Me.Button19.Text = "Logout"
+        Me.Button19.Text = "Back"
         Me.Button19.UseVisualStyleBackColor = False
         '
         'DataGridView_subcon
@@ -3025,7 +3025,7 @@ Partial Class Form2
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(121, 62)
         Me.Button21.TabIndex = 149
-        Me.Button21.Text = "Logout"
+        Me.Button21.Text = "Back"
         Me.Button21.UseVisualStyleBackColor = False
         '
         'Button18
@@ -3232,7 +3232,7 @@ Partial Class Form2
         Me.Location = New System.Drawing.Point(-10, 1)
         Me.Name = "Form2"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
